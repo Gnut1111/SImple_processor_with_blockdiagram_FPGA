@@ -34,43 +34,11 @@ The original datapath block (`RF → ALU → Shifter → OE`) is kept **unchange
 | **RRI** | `OC[3] Rs1[3] Rs2[3] Imm[7]` | 16 bits |
 | **RI** | `OC[3] Rd[3] Imm[9+]` | 16 bits |
 
-### RRR Instructions (OC = `000`)
+### Instruction Tables
 
-| Func | Mnemonic | Operation |
-|---|---|---|
-| `0000` | `add Rs1, Rs2, Rd` | Rd ← Rs1 + Rs2 |
-| `0001` | `sub Rs1, Rs2, Rd` | Rd ← Rs1 - Rs2 |
-| `0010` | `inc Rs1, Rd` | Rd ← Rs1 + 1 |
-| `0011` | `dec Rs1, Rd` | Rd ← Rs1 - 1 |
-| `0100` | `and Rs1, Rs2, Rd` | Rd ← Rs1 AND Rs2 |
-| `0101` | `or Rs1, Rs2, Rd` | Rd ← Rs1 OR Rs2 |
-| `0110` | `xor Rs1, Rs2, Rd` | Rd ← Rs1 XOR Rs2 |
-| `0111` | `nand Rs1, Rs2, Rd` | Rd ← Rs1 NAND Rs2 |
-| `1000` | `shl1 Rs1, Rd` | Rd ← Rs1 << 1 |
-| `1001` | `shl2 Rs1, Rd` | Rd ← Rs1 << 2 |
-| `1010` | `shl3 Rs1, Rd` | Rd ← Rs1 << 3 |
+![RRR Instructions](rrr_instructions.png)
 
-### RRI Instruction (OC = `010`)
-
-| Mnemonic | Operation |
-|---|---|
-| `beq Rs1, Rs2, Imm` | PC ← (Rs1 == Rs2) ? Imm : PC + 1 |
-
-### RI Instructions
-
-| OC | Mnemonic | Operation |
-|---|---|---|
-| `100` | `linp Rd` | Rd ← Input |
-| `101` | `wout Rd` | Output ← Rd |
-
-### Pseudo / Extended Instructions
-
-| Mnemonic | Encodes as | Note |
-|---|---|---|
-| `nop` | `and Rs, Rs, Rs` | No operation |
-| `not Rs, Rd` | `nand Rs, Rs, Rd` | Bitwise NOT |
-| `jmp Imm` | `beq Rs, Rs, Imm` | Unconditional jump |
-| `mov Rs, Rd` | `and Rs, Rs, Rd` | Register copy |
+![RRI and RI Instructions](rri_ri_instructions.png)
 
 ---
 
@@ -162,25 +130,6 @@ The Instruction Decoder is a **combinational** block that maps a 16-bit instruct
 | Core Dynamic | 0.00 mW |
 | Core Static | 79.94 mW |
 | I/O Thermal | 36.09 mW |
-
----
-
-## 📁 Project Structure
-
-```
-Simple_Processor_with_Blockdiagram/
-├── LENHCOBAN.bdf        # RRR decoder (OC = 000)
-├── LENHMORONG.bdf       # RRI/RI decoder (OC ≠ 000)
-├── CONTROLLER.bdf       # Top-level controller
-├── ZERO.bdf             # Zero flag detector
-├── PC.bdf               # PC logic (Zero + Adder + MUX)
-├── Datapath.bdf         # Original datapath (RF+ALU+Shifter+OE) — unchanged
-├── PROCESSORREAL.bdf    # Top-level processor
-├── lab3.sim.vwf         # Functional simulation waveform
-├── lab3.vwf             # Gate-level timing simulation waveform
-├── architecture.png     # CPU block diagram
-└── README.md
-```
 
 ---
 
