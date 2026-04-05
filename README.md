@@ -34,34 +34,11 @@ The original datapath block (`RF → ALU → Shifter → OE`) is kept **unchange
 | **RRI** | `OC[3] Rs1[3] Rs2[3] Imm[7]` | 16 bits |
 | **RI** | `OC[3] Rd[3] Imm[9+]` | 16 bits |
 
-### RRR Instructions (OC = `000`)
+### Instruction Tables
 
-| Func | Mnemonic | Operation |
-|---|---|---|
-| `0000` | `add Rs1, Rs2, Rd` | Rd ← Rs1 + Rs2 |
-| `0001` | `sub Rs1, Rs2, Rd` | Rd ← Rs1 - Rs2 |
-| `0010` | `inc Rs1, Rd` | Rd ← Rs1 + 1 |
-| `0011` | `dec Rs1, Rd` | Rd ← Rs1 - 1 |
-| `0100` | `and Rs1, Rs2, Rd` | Rd ← Rs1 AND Rs2 |
-| `0101` | `or Rs1, Rs2, Rd` | Rd ← Rs1 OR Rs2 |
-| `0110` | `xor Rs1, Rs2, Rd` | Rd ← Rs1 XOR Rs2 |
-| `0111` | `nand Rs1, Rs2, Rd` | Rd ← Rs1 NAND Rs2 |
-| `1000` | `shl1 Rs1, Rd` | Rd ← Rs1 << 1 |
-| `1001` | `shl2 Rs1, Rd` | Rd ← Rs1 << 2 |
-| `1010` | `shl3 Rs1, Rd` | Rd ← Rs1 << 3 |
+![RRR Instructions](rrr_instructions.png)
 
-### RRI Instruction (OC = `010`)
-
-| Mnemonic | Operation |
-|---|---|
-| `beq Rs1, Rs2, Imm` | PC ← (Rs1 == Rs2) ? Imm : PC + 1 |
-
-### RI Instructions
-
-| OC | Mnemonic | Operation |
-|---|---|---|
-| `100` | `linp Rd` | Rd ← Input |
-| `101` | `wout Rd` | Output ← Rd |
+![RRI and RI Instructions](rri_ri_instructions.png)
 
 ---
 
