@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="IN[3]" source="Pin Planner" >
+		</pin>
+		<pin name="IN[2]" source="Pin Planner" >
+		</pin>
+		<pin name="IN[1]" source="Pin Planner" >
+		</pin>
+		<pin name="IN[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[0]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[1]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[2]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[3]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[4]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[5]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[6]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[7]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[8]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[9]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[10]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[11]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[12]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[13]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[14]" source="Pin Planner" >
+		</pin>
+		<pin name="OUT[15]" source="Pin Planner" >
+		</pin>
+		<pin name="CLK" source="Pin Planner" >
+		</pin>
+		<pin name="Q[0]" source="Pin Planner" >
+		</pin>
+		<pin name="Q[1]" source="Pin Planner" >
+		</pin>
+		<pin name="Q[2]" source="Pin Planner" >
+		</pin>
+		<pin name="Q[3]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>
