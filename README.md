@@ -156,25 +156,6 @@ The Instruction Decoder is a **combinational** block that maps a 16-bit instruct
 
 ---
 
-## 📁 Project Structure
-
-```
-Simple_Processor_with_Blockdiagram/
-├── LENHCOBAN.bdf        # RRR decoder (OC = 000)
-├── LENHMORONG.bdf       # RRI/RI decoder (OC ≠ 000)
-├── CONTROLLER.bdf       # Top-level controller
-├── ZERO.bdf             # Zero flag detector
-├── PC.bdf               # PC logic (Zero + Adder + MUX)
-├── Datapath.bdf         # Original datapath (RF+ALU+Shifter+OE) — unchanged
-├── PROCESSORREAL.bdf    # Top-level processor
-├── lab3.sim.vwf         # Functional simulation waveform
-├── lab3.vwf             # Gate-level timing simulation waveform
-├── architecture.png     # CPU block diagram
-└── README.md
-```
-
----
-
 ## ⚙️ How to Run
 
 1. Open `PROCESSORREAL.bdf` as the top-level entity in Quartus II
