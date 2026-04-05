@@ -63,15 +63,6 @@ The original datapath block (`RF → ALU → Shifter → OE`) is kept **unchange
 | `100` | `linp Rd` | Rd ← Input |
 | `101` | `wout Rd` | Output ← Rd |
 
-### Pseudo / Extended Instructions
-
-| Mnemonic | Encodes as | Note |
-|---|---|---|
-| `nop` | `and Rs, Rs, Rs` | No operation |
-| `not Rs, Rd` | `nand Rs, Rs, Rd` | Bitwise NOT |
-| `jmp Imm` | `beq Rs, Rs, Imm` | Unconditional jump |
-| `mov Rs, Rd` | `and Rs, Rs, Rd` | Register copy |
-
 ---
 
 ## 🔧 Controller Design
